@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <StartupObject></StartupObject>
+    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn />
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="rem copy InguzDSP.exe &quot;C:\Program Files\SlimServer\server\Bin\MSWin32-x86-multi-thread&quot;&#xD;&#xA;rem copy InguzDSP.exe.config &quot;C:\Program Files\SlimServer\server\Bin\MSWin32-x86-multi-thread&quot;&#xD;&#xA;rem copy DSPUtil.dll &quot;C:\Program Files\SlimServer\server\Bin\MSWin32-x86-multi-thread&quot;&#xD;&#xA;rem copy DSPfft.dll &quot;C:\Program Files\SlimServer\server\Bin\MSWin32-x86-multi-thread&quot;" />
+  </Target>
+
+  <ItemGroup>
+    <None Remove="Resources\InguzDSPUtilNew.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="InguzDSPUtilNew">
+      <HintPath>..\..\InguzDSPUtilNew\InguzDSPUtilNew\bin\Release\net5.0\InguzDSPUtilNew.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
