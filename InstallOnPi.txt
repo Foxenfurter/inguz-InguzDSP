@@ -1,0 +1,34 @@
+
+InguzDSP executable needs to be installed here.
+/usr/local/slimserver/Bin/armhf-linux
+
+For Inguz it is here - 
+sudo unzip SqueezeBoxEQ -d /usr/local/slimserver/Plugins
+/usr/local/slimserver/Plugins
+
+for logging and stuff
+sudo mkdir /usr/share/InguzEQ
+sudo chmod 777 /usr/share/InguzEQ
+
+Need to install extension krb5.tcz
+
+
+Need to copy over my custom conf file
+
+not sure yet whether these are necessary
+sudo mkdir /usr/share/slimserver
+sudo mkdir /usr/share/slimserver/.wapi
+
+
+https://github.com/Foxenfurter/SqueezeBoxEQ/archive/refs/heads/main.zip
+
+wget -O - https://github.com/Foxenfurter/SqueezeBoxEQ/archive/refs/heads/main.zip | jar xz 
+wget  - https://github.com/Foxenfurter/SqueezeBoxEQ/archive/refs/heads/main.zip | unzip ./InguzEQ
+
+git clone git@github.com:whatever NonExistentNewFolderName
+
+https://github.com/Foxenfurter/SqueezeBoxEQ/main.zip
+
+https://github.com/Foxenfurter/SqueezeBoxEQ.git
+https://github.com/Foxenfurter/SqueezeBoxEQ/archive/refs/heads/main.zip
+https://github.com/Foxenfurter/SqueezeBoxEQ/archive/refs/heads/SqueezeBoxEQ-main.zip

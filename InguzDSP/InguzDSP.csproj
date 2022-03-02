@@ -25,12 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Kerberos.NET" Version="4.5.150" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="InguzDSPUtilNew">
-      <HintPath>..\..\InguzDSPUtilNew\InguzDSPUtilNew\bin\Release\net5.0\InguzDSPUtilNew.dll</HintPath>
+      <HintPath>..\..\inguz-DSPUtil\InguzDSPUtilNew\bin\Release\net5.0\InguzDSPUtilNew.dll</HintPath>
     </Reference>
   </ItemGroup>
 
