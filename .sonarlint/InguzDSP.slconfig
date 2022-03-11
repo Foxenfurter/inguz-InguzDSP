@@ -1,0 +1,12 @@
+{
+  "ServerUri": "http://localhost:9000/",
+  "Organization": null,
+  "ProjectKey": "InguzDSP",
+  "ProjectName": "InguzDSP",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AX95LOicJOthHiM-kFWW",
+      "ProfileTimestamp": "2022-03-11T13:31:00Z"
+    }
+  }
+}

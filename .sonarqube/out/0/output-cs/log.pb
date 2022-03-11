@@ -1,0 +1,1 @@
+Roslyn version: 4.0.0.0Language version: CSharp9"Concurrent execution: disabled‰„File 'E:\GitHub\inguz-InguzDSP\InguzDSP\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs' was recognized as generatedrnFile 'E:\GitHub\inguz-InguzDSP\InguzDSP\obj\Debug\net5.0\InguzDSP.AssemblyInfo.cs' was recognized as generated

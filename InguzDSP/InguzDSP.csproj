@@ -5,6 +5,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <StartupObject></StartupObject>
     <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+    <CodeAnalysisRuleSet>..\.sonarlint\inguzdspcsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,6 +23,10 @@
 
   <ItemGroup>
     <None Remove="Resources\InguzDSPUtilNew.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\.sonarlint\inguzdsp\CSharp\SonarLint.xml" Link="SonarLint.xml" />
   </ItemGroup>
 
   <ItemGroup>

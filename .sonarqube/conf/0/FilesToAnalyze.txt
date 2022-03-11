@@ -1,0 +1,5 @@
+﻿E:\GitHub\inguz-InguzDSP\InguzDSP\Program.cs
+E:\GitHub\inguz-InguzDSP\InguzDSP\App.config
+E:\GitHub\inguz-InguzDSP\InguzDSP\Icon.ico
+E:\GitHub\inguz-InguzDSP\InguzDSP\Resources\Icon.ico
+E:\GitHub\inguz-InguzDSP\InguzDSP\Resources\LeftRight.wav

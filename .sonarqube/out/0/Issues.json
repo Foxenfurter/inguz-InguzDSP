@@ -1,0 +1,5412 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.0.0.0",
+        "fileVersion": "4.0.1-1.22053.6 (9942dc95)",
+        "semanticVersion": "4.0.0",
+        "language": "en-GB"
+      },
+      "results": [
+        {
+          "ruleId": "CS0162",
+          "level": "warning",
+          "message": "Unreachable code detected",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2057,
+                  "startColumn": 13,
+                  "endLine": 2057,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 9,
+                  "endLine": 88,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 176,
+                  "startColumn": 17,
+                  "endLine": 176,
+                  "endColumn": 95
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 250,
+                  "startColumn": 33,
+                  "endLine": 250,
+                  "endColumn": 69
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 473,
+                  "startColumn": 21,
+                  "endLine": 473,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 501,
+                  "startColumn": 21,
+                  "endLine": 501,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 705,
+                  "startColumn": 1,
+                  "endLine": 705,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 815,
+                  "startColumn": 17,
+                  "endLine": 815,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 861,
+                  "startColumn": 13,
+                  "endLine": 861,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 876,
+                  "startColumn": 25,
+                  "endLine": 876,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1322,
+                  "startColumn": 93,
+                  "endLine": 1322,
+                  "endColumn": 103
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1326,
+                  "startColumn": 93,
+                  "endLine": 1326,
+                  "endColumn": 103
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1330,
+                  "startColumn": 94,
+                  "endLine": 1330,
+                  "endColumn": 104
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1347,
+                  "startColumn": 66,
+                  "endLine": 1347,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1369,
+                  "startColumn": 17,
+                  "endLine": 1369,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1409,
+                  "startColumn": 29,
+                  "endLine": 1409,
+                  "endColumn": 117
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1440,
+                  "startColumn": 13,
+                  "endLine": 1440,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1540,
+                  "startColumn": 65,
+                  "endLine": 1540,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1624,
+                  "startColumn": 21,
+                  "endLine": 1624,
+                  "endColumn": 98
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1741,
+                  "startColumn": 54,
+                  "endLine": 1741,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1925,
+                  "startColumn": 13,
+                  "endLine": 1925,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1941,
+                  "startColumn": 13,
+                  "endLine": 1941,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1947,
+                  "startColumn": 13,
+                  "endLine": 1947,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2011,
+                  "startColumn": 13,
+                  "endLine": 2011,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2099,
+                  "startColumn": 1,
+                  "endLine": 2099,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2153,
+                  "startColumn": 13,
+                  "endLine": 2153,
+                  "endColumn": 74
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2202,
+                  "startColumn": 13,
+                  "endLine": 2202,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2219,
+                  "startColumn": 46,
+                  "endLine": 2219,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2236,
+                  "startColumn": 13,
+                  "endLine": 2236,
+                  "endColumn": 91
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2343,
+                  "startColumn": 50,
+                  "endLine": 2343,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2499,
+                  "startColumn": 17,
+                  "endLine": 2499,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2510,
+                  "startColumn": 17,
+                  "endLine": 2510,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_sigparamA' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 23,
+                  "endLine": 41,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_sigparamB' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 23,
+                  "endLine": 42,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_ambiMatrixFile' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 23,
+                  "endLine": 110,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_ambiDistance' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 113,
+                  "startColumn": 23,
+                  "endLine": 113,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_ambiShelfFreq' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 23,
+                  "endLine": 114,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3241",
+          "level": "warning",
+          "message": "Change return type to 'void'; not a single caller uses the returned value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1032,
+                  "startColumn": 24,
+                  "endLine": 1032,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 168,
+                  "startColumn": 21,
+                  "endLine": 168,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 188,
+                  "startColumn": 17,
+                  "endLine": 188,
+                  "endColumn": 20
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 188,
+                  "startColumn": 36,
+                  "endLine": 188,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 195,
+                  "startColumn": 25,
+                  "endLine": 195,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 236,
+                  "startColumn": 33,
+                  "endLine": 236,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 242,
+                  "startColumn": 33,
+                  "endLine": 242,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 256,
+                  "startColumn": 33,
+                  "endLine": 256,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 263,
+                  "startColumn": 33,
+                  "endLine": 263,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 293,
+                  "startColumn": 21,
+                  "endLine": 293,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 295,
+                  "startColumn": 17,
+                  "endLine": 295,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 295,
+                  "startColumn": 24,
+                  "endLine": 295,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 303,
+                  "startColumn": 17,
+                  "endLine": 303,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 308,
+                  "startColumn": 13,
+                  "endLine": 308,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "10": "+1",
+              "11": "+1",
+              "2": "+2 (incl 1 for nesting)",
+              "3": "+3 (incl 2 for nesting)",
+              "4": "+3 (incl 2 for nesting)",
+              "5": "+3 (incl 2 for nesting)",
+              "6": "+1",
+              "7": "+2 (incl 1 for nesting)",
+              "8": "+1",
+              "9": "+1"
+            }
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 79 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 322,
+                  "startColumn": 21,
+                  "endLine": 322,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 328,
+                  "startColumn": 13,
+                  "endLine": 328,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 334,
+                  "startColumn": 13,
+                  "endLine": 334,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 349,
+                  "startColumn": 13,
+                  "endLine": 349,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 353,
+                  "startColumn": 13,
+                  "endLine": 353,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 358,
+                  "startColumn": 13,
+                  "endLine": 358,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 375,
+                  "startColumn": 13,
+                  "endLine": 375,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 375,
+                  "startColumn": 23,
+                  "endLine": 375,
+                  "endColumn": 25
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 383,
+                  "startColumn": 13,
+                  "endLine": 383,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 383,
+                  "startColumn": 23,
+                  "endLine": 383,
+                  "endColumn": 25
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 396,
+                  "startColumn": 17,
+                  "endLine": 396,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 400,
+                  "startColumn": 17,
+                  "endLine": 400,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 404,
+                  "startColumn": 17,
+                  "endLine": 404,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 411,
+                  "startColumn": 13,
+                  "endLine": 411,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 417,
+                  "startColumn": 13,
+                  "endLine": 417,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 419,
+                  "startColumn": 17,
+                  "endLine": 419,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 425,
+                  "startColumn": 17,
+                  "endLine": 425,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 17,
+                  "endLine": 433,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 437,
+                  "startColumn": 17,
+                  "endLine": 437,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 443,
+                  "startColumn": 17,
+                  "endLine": 443,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 443,
+                  "startColumn": 93,
+                  "endLine": 443,
+                  "endColumn": 95
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 452,
+                  "startColumn": 13,
+                  "endLine": 452,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 460,
+                  "startColumn": 13,
+                  "endLine": 460,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 460,
+                  "startColumn": 33,
+                  "endLine": 460,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 465,
+                  "startColumn": 13,
+                  "endLine": 465,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 467,
+                  "startColumn": 17,
+                  "endLine": 467,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 476,
+                  "startColumn": 17,
+                  "endLine": 476,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 476,
+                  "startColumn": 24,
+                  "endLine": 476,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 481,
+                  "startColumn": 17,
+                  "endLine": 481,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 494,
+                  "startColumn": 21,
+                  "endLine": 494,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 517,
+                  "startColumn": 21,
+                  "endLine": 517,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 525,
+                  "startColumn": 21,
+                  "endLine": 525,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 528,
+                  "startColumn": 25,
+                  "endLine": 528,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 532,
+                  "startColumn": 25,
+                  "endLine": 532,
+                  "endColumn": 29
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 536,
+                  "startColumn": 25,
+                  "endLine": 536,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 540,
+                  "startColumn": 25,
+                  "endLine": 540,
+                  "endColumn": 29
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 548,
+                  "startColumn": 21,
+                  "endLine": 548,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 548,
+                  "startColumn": 38,
+                  "endLine": 548,
+                  "endColumn": 40
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 560,
+                  "startColumn": 13,
+                  "endLine": 560,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 566,
+                  "startColumn": 44,
+                  "endLine": 566,
+                  "endColumn": 45
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 568,
+                  "startColumn": 65,
+                  "endLine": 568,
+                  "endColumn": 66
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 569,
+                  "startColumn": 70,
+                  "endLine": 569,
+                  "endColumn": 71
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 569,
+                  "startColumn": 56,
+                  "endLine": 569,
+                  "endColumn": 58
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 570,
+                  "startColumn": 67,
+                  "endLine": 570,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 570,
+                  "startColumn": 53,
+                  "endLine": 570,
+                  "endColumn": 55
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 572,
+                  "startColumn": 17,
+                  "endLine": 572,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 578,
+                  "startColumn": 17,
+                  "endLine": 578,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 583,
+                  "startColumn": 52,
+                  "endLine": 583,
+                  "endColumn": 53
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 584,
+                  "startColumn": 17,
+                  "endLine": 584,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 588,
+                  "startColumn": 17,
+                  "endLine": 588,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "10": "+1",
+              "11": "+1",
+              "12": "+1",
+              "13": "+1",
+              "14": "+2 (incl 1 for nesting)",
+              "15": "+2 (incl 1 for nesting)",
+              "16": "+2 (incl 1 for nesting)",
+              "17": "+2 (incl 1 for nesting)",
+              "18": "+2 (incl 1 for nesting)",
+              "19": "+1",
+              "2": "+1",
+              "20": "+1",
+              "21": "+1",
+              "22": "+1",
+              "23": "+1",
+              "24": "+2 (incl 1 for nesting)",
+              "25": "+2 (incl 1 for nesting)",
+              "26": "+1",
+              "27": "+2 (incl 1 for nesting)",
+              "28": "+3 (incl 2 for nesting)",
+              "29": "+3 (incl 2 for nesting)",
+              "3": "+1",
+              "30": "+3 (incl 2 for nesting)",
+              "31": "+4 (incl 3 for nesting)",
+              "32": "+1",
+              "33": "+4 (incl 3 for nesting)",
+              "34": "+1",
+              "35": "+3 (incl 2 for nesting)",
+              "36": "+1",
+              "37": "+1",
+              "38": "+2 (incl 1 for nesting)",
+              "39": "+2 (incl 1 for nesting)",
+              "4": "+1",
+              "40": "+2 (incl 1 for nesting)",
+              "41": "+1",
+              "42": "+2 (incl 1 for nesting)",
+              "43": "+1",
+              "44": "+2 (incl 1 for nesting)",
+              "45": "+2 (incl 1 for nesting)",
+              "46": "+2 (incl 1 for nesting)",
+              "47": "+2 (incl 1 for nesting)",
+              "48": "+1",
+              "5": "+1",
+              "6": "+1",
+              "7": "+1",
+              "8": "+1",
+              "9": "+1"
+            }
+          }
+        },
+        {
+          "ruleId": "S3265",
+          "level": "warning",
+          "message": "Remove this bitwise operation; the enum 'ChannelFlag' is not marked with 'Flags' attribute.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 648,
+                  "startColumn": 56,
+                  "endLine": 648,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3265",
+          "level": "warning",
+          "message": "Remove this bitwise operation; the enum 'ChannelFlag' is not marked with 'Flags' attribute.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 652,
+                  "startColumn": 56,
+                  "endLine": 652,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3265",
+          "level": "warning",
+          "message": "Remove this bitwise operation; the enum 'ChannelFlag' is not marked with 'Flags' attribute.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 656,
+                  "startColumn": 56,
+                  "endLine": 656,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3265",
+          "level": "warning",
+          "message": "Remove this bitwise operation; the enum 'ChannelFlag' is not marked with 'Flags' attribute.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 664,
+                  "startColumn": 56,
+                  "endLine": 664,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3265",
+          "level": "warning",
+          "message": "Remove this bitwise operation; the enum 'ChannelFlag' is not marked with 'Flags' attribute.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 668,
+                  "startColumn": 56,
+                  "endLine": 668,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 796,
+                  "startColumn": 52,
+                  "endLine": 796,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 671,
+                  "startColumn": 26,
+                  "endLine": 671,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 677,
+                  "startColumn": 13,
+                  "endLine": 677,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 682,
+                  "startColumn": 21,
+                  "endLine": 682,
+                  "endColumn": 28
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 684,
+                  "startColumn": 25,
+                  "endLine": 684,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 691,
+                  "startColumn": 29,
+                  "endLine": 691,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 722,
+                  "startColumn": 21,
+                  "endLine": 722,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 727,
+                  "startColumn": 21,
+                  "endLine": 727,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 735,
+                  "startColumn": 21,
+                  "endLine": 735,
+                  "endColumn": 25
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 796,
+                  "startColumn": 50,
+                  "endLine": 796,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 798,
+                  "startColumn": 72,
+                  "endLine": 798,
+                  "endColumn": 73
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 804,
+                  "startColumn": 21,
+                  "endLine": 804,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 805,
+                  "startColumn": 21,
+                  "endLine": 805,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 808,
+                  "startColumn": 21,
+                  "endLine": 808,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 809,
+                  "startColumn": 21,
+                  "endLine": 809,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 821,
+                  "startColumn": 13,
+                  "endLine": 821,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 823,
+                  "startColumn": 17,
+                  "endLine": 823,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 827,
+                  "startColumn": 17,
+                  "endLine": 827,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 831,
+                  "startColumn": 17,
+                  "endLine": 831,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 835,
+                  "startColumn": 17,
+                  "endLine": 835,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+2 (incl 1 for nesting)",
+              "10": "+2 (incl 1 for nesting)",
+              "11": "+2 (incl 1 for nesting)",
+              "12": "+2 (incl 1 for nesting)",
+              "13": "+1",
+              "14": "+2 (incl 1 for nesting)",
+              "15": "+1",
+              "16": "+1",
+              "17": "+1",
+              "2": "+3 (incl 2 for nesting)",
+              "3": "+4 (incl 3 for nesting)",
+              "4": "+2 (incl 1 for nesting)",
+              "5": "+2 (incl 1 for nesting)",
+              "6": "+1",
+              "7": "+2 (incl 1 for nesting)",
+              "8": "+2 (incl 1 for nesting)",
+              "9": "+2 (incl 1 for nesting)"
+            }
+          }
+        },
+        {
+          "ruleId": "S1172",
+          "level": "warning",
+          "message": "Remove this unused method parameter 'doRun'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 322,
+                  "startColumn": 30,
+                  "endLine": 322,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "IsRemovable": "True"
+            }
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'description'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 813,
+                  "startColumn": 21,
+                  "endLine": 813,
+                  "endColumn": 117
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3267",
+          "level": "warning",
+          "message": "Loops should be simplified with \"LINQ\" expressions",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 682,
+                  "startColumn": 42,
+                  "endLine": 682,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 684,
+                  "startColumn": 29,
+                  "endLine": 684,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1905",
+          "level": "warning",
+          "message": "Remove this unnecessary cast to 'int'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 739,
+                  "startColumn": 92,
+                  "endLine": 739,
+                  "endColumn": 95
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 717,
+                  "startColumn": 35,
+                  "endLine": 717,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 792,
+                  "startColumn": 35,
+                  "endLine": 792,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 972,
+                  "startColumn": 13,
+                  "endLine": 972,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 975,
+                  "startColumn": 13,
+                  "endLine": 975,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 977,
+                  "startColumn": 13,
+                  "endLine": 977,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 979,
+                  "startColumn": 13,
+                  "endLine": 979,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 981,
+                  "startColumn": 13,
+                  "endLine": 981,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 983,
+                  "startColumn": 13,
+                  "endLine": 983,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 985,
+                  "startColumn": 13,
+                  "endLine": 985,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 988,
+                  "startColumn": 13,
+                  "endLine": 988,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 990,
+                  "startColumn": 13,
+                  "endLine": 990,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 993,
+                  "startColumn": 13,
+                  "endLine": 993,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 995,
+                  "startColumn": 13,
+                  "endLine": 995,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 997,
+                  "startColumn": 13,
+                  "endLine": 997,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1000,
+                  "startColumn": 13,
+                  "endLine": 1000,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1003,
+                  "startColumn": 13,
+                  "endLine": 1003,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1006,
+                  "startColumn": 13,
+                  "endLine": 1006,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1010,
+                  "startColumn": 13,
+                  "endLine": 1010,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1013,
+                  "startColumn": 13,
+                  "endLine": 1013,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1017,
+                  "startColumn": 13,
+                  "endLine": 1017,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1020,
+                  "startColumn": 13,
+                  "endLine": 1020,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1024,
+                  "startColumn": 13,
+                  "endLine": 1024,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1027,
+                  "startColumn": 13,
+                  "endLine": 1027,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 952,
+                  "startColumn": 21,
+                  "endLine": 952,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 965,
+                  "startColumn": 13,
+                  "endLine": 965,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 972,
+                  "startColumn": 13,
+                  "endLine": 972,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 975,
+                  "startColumn": 13,
+                  "endLine": 975,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 977,
+                  "startColumn": 13,
+                  "endLine": 977,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 979,
+                  "startColumn": 13,
+                  "endLine": 979,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 981,
+                  "startColumn": 13,
+                  "endLine": 981,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 983,
+                  "startColumn": 13,
+                  "endLine": 983,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 985,
+                  "startColumn": 13,
+                  "endLine": 985,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 988,
+                  "startColumn": 13,
+                  "endLine": 988,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 990,
+                  "startColumn": 13,
+                  "endLine": 990,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 993,
+                  "startColumn": 13,
+                  "endLine": 993,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 995,
+                  "startColumn": 13,
+                  "endLine": 995,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 997,
+                  "startColumn": 13,
+                  "endLine": 997,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1000,
+                  "startColumn": 13,
+                  "endLine": 1000,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1003,
+                  "startColumn": 13,
+                  "endLine": 1003,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1006,
+                  "startColumn": 13,
+                  "endLine": 1006,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1010,
+                  "startColumn": 13,
+                  "endLine": 1010,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1013,
+                  "startColumn": 13,
+                  "endLine": 1013,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1017,
+                  "startColumn": 13,
+                  "endLine": 1017,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1020,
+                  "startColumn": 13,
+                  "endLine": 1020,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1024,
+                  "startColumn": 13,
+                  "endLine": 1024,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1027,
+                  "startColumn": 13,
+                  "endLine": 1027,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "10": "+1",
+              "11": "+1",
+              "12": "+1",
+              "13": "+1",
+              "14": "+1",
+              "15": "+1",
+              "16": "+1",
+              "17": "+1",
+              "18": "+1",
+              "19": "+1",
+              "2": "+1",
+              "20": "+1",
+              "21": "+1",
+              "3": "+1",
+              "4": "+1",
+              "5": "+1",
+              "6": "+1",
+              "7": "+1",
+              "8": "+1",
+              "9": "+1"
+            }
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 972,
+                  "startColumn": 31,
+                  "endLine": 972,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 975,
+                  "startColumn": 31,
+                  "endLine": 975,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 977,
+                  "startColumn": 31,
+                  "endLine": 977,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 979,
+                  "startColumn": 31,
+                  "endLine": 979,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 981,
+                  "startColumn": 31,
+                  "endLine": 981,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 983,
+                  "startColumn": 31,
+                  "endLine": 983,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 985,
+                  "startColumn": 31,
+                  "endLine": 985,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 988,
+                  "startColumn": 31,
+                  "endLine": 988,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 990,
+                  "startColumn": 31,
+                  "endLine": 990,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 993,
+                  "startColumn": 31,
+                  "endLine": 993,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 995,
+                  "startColumn": 31,
+                  "endLine": 995,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 997,
+                  "startColumn": 31,
+                  "endLine": 997,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1000,
+                  "startColumn": 31,
+                  "endLine": 1000,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1003,
+                  "startColumn": 31,
+                  "endLine": 1003,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1006,
+                  "startColumn": 31,
+                  "endLine": 1006,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1010,
+                  "startColumn": 31,
+                  "endLine": 1010,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1013,
+                  "startColumn": 31,
+                  "endLine": 1013,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1017,
+                  "startColumn": 31,
+                  "endLine": 1017,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1020,
+                  "startColumn": 31,
+                  "endLine": 1020,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1024,
+                  "startColumn": 31,
+                  "endLine": 1024,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1027,
+                  "startColumn": 31,
+                  "endLine": 1027,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1089,
+                  "startColumn": 29,
+                  "endLine": 1089,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1091,
+                  "startColumn": 13,
+                  "endLine": 1091,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1093,
+                  "startColumn": 17,
+                  "endLine": 1093,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1096,
+                  "startColumn": 21,
+                  "endLine": 1096,
+                  "endColumn": 24
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1101,
+                  "startColumn": 17,
+                  "endLine": 1101,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1117,
+                  "startColumn": 21,
+                  "endLine": 1117,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1119,
+                  "startColumn": 60,
+                  "endLine": 1119,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1120,
+                  "startColumn": 60,
+                  "endLine": 1120,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1122,
+                  "startColumn": 21,
+                  "endLine": 1122,
+                  "endColumn": 25
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1124,
+                  "startColumn": 60,
+                  "endLine": 1124,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1125,
+                  "startColumn": 60,
+                  "endLine": 1125,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1130,
+                  "startColumn": 56,
+                  "endLine": 1130,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1131,
+                  "startColumn": 21,
+                  "endLine": 1131,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1133,
+                  "startColumn": 61,
+                  "endLine": 1133,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+2 (incl 1 for nesting)",
+              "10": "+3 (incl 2 for nesting)",
+              "11": "+3 (incl 2 for nesting)",
+              "12": "+4 (incl 3 for nesting)",
+              "2": "+3 (incl 2 for nesting)",
+              "3": "+1",
+              "4": "+3 (incl 2 for nesting)",
+              "5": "+4 (incl 3 for nesting)",
+              "6": "+4 (incl 3 for nesting)",
+              "7": "+1",
+              "8": "+4 (incl 3 for nesting)",
+              "9": "+4 (incl 3 for nesting)"
+            }
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'fade'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 730,
+                  "startColumn": 29,
+                  "endLine": 730,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1194,
+                  "startColumn": 13,
+                  "endLine": 1194,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1221,
+                  "startColumn": 17,
+                  "endLine": 1221,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1194,
+                  "startColumn": 31,
+                  "endLine": 1194,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1221,
+                  "startColumn": 35,
+                  "endLine": 1221,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 72 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1227,
+                  "startColumn": 21,
+                  "endLine": 1227,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1249,
+                  "startColumn": 17,
+                  "endLine": 1249,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1253,
+                  "startColumn": 21,
+                  "endLine": 1253,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1255,
+                  "startColumn": 25,
+                  "endLine": 1255,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1273,
+                  "startColumn": 21,
+                  "endLine": 1273,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1275,
+                  "startColumn": 25,
+                  "endLine": 1275,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1300,
+                  "startColumn": 33,
+                  "endLine": 1300,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1302,
+                  "startColumn": 67,
+                  "endLine": 1302,
+                  "endColumn": 68
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1323,
+                  "startColumn": 45,
+                  "endLine": 1323,
+                  "endColumn": 46
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1327,
+                  "startColumn": 46,
+                  "endLine": 1327,
+                  "endColumn": 47
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1331,
+                  "startColumn": 47,
+                  "endLine": 1331,
+                  "endColumn": 48
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1334,
+                  "startColumn": 43,
+                  "endLine": 1334,
+                  "endColumn": 44
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1338,
+                  "startColumn": 17,
+                  "endLine": 1338,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1340,
+                  "startColumn": 21,
+                  "endLine": 1340,
+                  "endColumn": 28
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1344,
+                  "startColumn": 53,
+                  "endLine": 1344,
+                  "endColumn": 54
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1345,
+                  "startColumn": 25,
+                  "endLine": 1345,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1345,
+                  "startColumn": 40,
+                  "endLine": 1345,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1348,
+                  "startColumn": 57,
+                  "endLine": 1348,
+                  "endColumn": 58
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1349,
+                  "startColumn": 29,
+                  "endLine": 1349,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1350,
+                  "startColumn": 29,
+                  "endLine": 1350,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1361,
+                  "startColumn": 41,
+                  "endLine": 1361,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1368,
+                  "startColumn": 41,
+                  "endLine": 1368,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1372,
+                  "startColumn": 43,
+                  "endLine": 1372,
+                  "endColumn": 44
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1376,
+                  "startColumn": 40,
+                  "endLine": 1376,
+                  "endColumn": 41
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1383,
+                  "startColumn": 17,
+                  "endLine": 1383,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1383,
+                  "startColumn": 54,
+                  "endLine": 1383,
+                  "endColumn": 56
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1398,
+                  "startColumn": 17,
+                  "endLine": 1398,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1401,
+                  "startColumn": 21,
+                  "endLine": 1401,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1401,
+                  "startColumn": 48,
+                  "endLine": 1401,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1405,
+                  "startColumn": 21,
+                  "endLine": 1405,
+                  "endColumn": 25
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1407,
+                  "startColumn": 25,
+                  "endLine": 1407,
+                  "endColumn": 28
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1410,
+                  "startColumn": 29,
+                  "endLine": 1410,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1417,
+                  "startColumn": 21,
+                  "endLine": 1417,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1417,
+                  "startColumn": 35,
+                  "endLine": 1417,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1422,
+                  "startColumn": 21,
+                  "endLine": 1422,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1422,
+                  "startColumn": 60,
+                  "endLine": 1422,
+                  "endColumn": 62
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1426,
+                  "startColumn": 21,
+                  "endLine": 1426,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+2 (incl 1 for nesting)",
+              "10": "+1",
+              "11": "+1",
+              "12": "+2 (incl 1 for nesting)",
+              "13": "+3 (incl 2 for nesting)",
+              "14": "+3 (incl 2 for nesting)",
+              "15": "+1",
+              "16": "+4 (incl 3 for nesting)",
+              "17": "+4 (incl 3 for nesting)",
+              "18": "+4 (incl 3 for nesting)",
+              "19": "+1",
+              "2": "+3 (incl 2 for nesting)",
+              "20": "+1",
+              "21": "+1",
+              "22": "+1",
+              "23": "+1",
+              "24": "+1",
+              "25": "+1",
+              "26": "+2 (incl 1 for nesting)",
+              "27": "+1",
+              "28": "+1",
+              "29": "+3 (incl 2 for nesting)",
+              "3": "+2 (incl 1 for nesting)",
+              "30": "+4 (incl 3 for nesting)",
+              "31": "+2 (incl 1 for nesting)",
+              "32": "+1",
+              "33": "+2 (incl 1 for nesting)",
+              "34": "+1",
+              "35": "+2 (incl 1 for nesting)",
+              "4": "+3 (incl 2 for nesting)",
+              "5": "+4 (incl 3 for nesting)",
+              "6": "+5 (incl 4 for nesting)",
+              "7": "+1",
+              "8": "+1",
+              "9": "+1"
+            }
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1462,
+                  "startColumn": 21,
+                  "endLine": 1462,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1468,
+                  "startColumn": 37,
+                  "endLine": 1468,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1469,
+                  "startColumn": 13,
+                  "endLine": 1469,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1471,
+                  "startColumn": 17,
+                  "endLine": 1471,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1477,
+                  "startColumn": 13,
+                  "endLine": 1477,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1477,
+                  "startColumn": 30,
+                  "endLine": 1477,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1481,
+                  "startColumn": 13,
+                  "endLine": 1481,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1481,
+                  "startColumn": 35,
+                  "endLine": 1481,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1485,
+                  "startColumn": 13,
+                  "endLine": 1485,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1485,
+                  "startColumn": 35,
+                  "endLine": 1485,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1491,
+                  "startColumn": 17,
+                  "endLine": 1491,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1495,
+                  "startColumn": 17,
+                  "endLine": 1495,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1502,
+                  "startColumn": 21,
+                  "endLine": 1502,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1504,
+                  "startColumn": 25,
+                  "endLine": 1504,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1511,
+                  "startColumn": 17,
+                  "endLine": 1511,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1532,
+                  "startColumn": 25,
+                  "endLine": 1532,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1546,
+                  "startColumn": 21,
+                  "endLine": 1546,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1548,
+                  "startColumn": 25,
+                  "endLine": 1548,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1558,
+                  "startColumn": 13,
+                  "endLine": 1558,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1562,
+                  "startColumn": 17,
+                  "endLine": 1562,
+                  "endColumn": 20
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1566,
+                  "startColumn": 21,
+                  "endLine": 1566,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1574,
+                  "startColumn": 13,
+                  "endLine": 1574,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "10": "+2 (incl 1 for nesting)",
+              "11": "+3 (incl 2 for nesting)",
+              "12": "+4 (incl 3 for nesting)",
+              "13": "+2 (incl 1 for nesting)",
+              "14": "+3 (incl 2 for nesting)",
+              "15": "+3 (incl 2 for nesting)",
+              "16": "+4 (incl 3 for nesting)",
+              "17": "+1",
+              "18": "+2 (incl 1 for nesting)",
+              "19": "+3 (incl 2 for nesting)",
+              "2": "+2 (incl 1 for nesting)",
+              "20": "+1",
+              "3": "+1",
+              "4": "+1",
+              "5": "+1",
+              "6": "+1",
+              "7": "+1",
+              "8": "+1",
+              "9": "+2 (incl 1 for nesting)"
+            }
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1581,
+                  "startColumn": 25,
+                  "endLine": 1581,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1584,
+                  "startColumn": 13,
+                  "endLine": 1584,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1585,
+                  "startColumn": 13,
+                  "endLine": 1585,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1586,
+                  "startColumn": 13,
+                  "endLine": 1586,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1587,
+                  "startColumn": 13,
+                  "endLine": 1587,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1588,
+                  "startColumn": 13,
+                  "endLine": 1588,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1589,
+                  "startColumn": 13,
+                  "endLine": 1589,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1597,
+                  "startColumn": 13,
+                  "endLine": 1597,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1601,
+                  "startColumn": 13,
+                  "endLine": 1601,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1603,
+                  "startColumn": 17,
+                  "endLine": 1603,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1614,
+                  "startColumn": 21,
+                  "endLine": 1614,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1619,
+                  "startColumn": 21,
+                  "endLine": 1619,
+                  "endColumn": 25
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1628,
+                  "startColumn": 17,
+                  "endLine": 1628,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1634,
+                  "startColumn": 13,
+                  "endLine": 1634,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "10": "+1",
+              "11": "+1",
+              "12": "+1",
+              "2": "+1",
+              "3": "+1",
+              "4": "+1",
+              "5": "+1",
+              "6": "+1",
+              "7": "+1",
+              "8": "+2 (incl 1 for nesting)",
+              "9": "+3 (incl 2 for nesting)"
+            }
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1643,
+                  "startColumn": 25,
+                  "endLine": 1643,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1652,
+                  "startColumn": 51,
+                  "endLine": 1652,
+                  "endColumn": 53
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1655,
+                  "startColumn": 13,
+                  "endLine": 1655,
+                  "endColumn": 20
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1665,
+                  "startColumn": 13,
+                  "endLine": 1665,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1671,
+                  "startColumn": 13,
+                  "endLine": 1671,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1678,
+                  "startColumn": 13,
+                  "endLine": 1678,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1685,
+                  "startColumn": 17,
+                  "endLine": 1685,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1687,
+                  "startColumn": 21,
+                  "endLine": 1687,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1693,
+                  "startColumn": 13,
+                  "endLine": 1693,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1700,
+                  "startColumn": 17,
+                  "endLine": 1700,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1711,
+                  "startColumn": 17,
+                  "endLine": 1711,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1733,
+                  "startColumn": 21,
+                  "endLine": 1733,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1749,
+                  "startColumn": 17,
+                  "endLine": 1749,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1751,
+                  "startColumn": 21,
+                  "endLine": 1751,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1758,
+                  "startColumn": 13,
+                  "endLine": 1758,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "10": "+2 (incl 1 for nesting)",
+              "11": "+2 (incl 1 for nesting)",
+              "12": "+3 (incl 2 for nesting)",
+              "13": "+1",
+              "2": "+1",
+              "3": "+1",
+              "4": "+1",
+              "5": "+2 (incl 1 for nesting)",
+              "6": "+3 (incl 2 for nesting)",
+              "7": "+1",
+              "8": "+2 (incl 1 for nesting)",
+              "9": "+2 (incl 1 for nesting)"
+            }
+          }
+        },
+        {
+          "ruleId": "S1168",
+          "level": "warning",
+          "message": "Return an empty collection instead of null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1669,
+                  "startColumn": 17,
+                  "endLine": 1669,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2486",
+          "level": "warning",
+          "message": "Handle the exception or explain in a comment why it can be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1835,
+                  "startColumn": 17,
+                  "endLine": 1835,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S108",
+          "level": "warning",
+          "message": "Either remove or fill this block of code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 1835,
+                  "startColumn": 35,
+                  "endLine": 1835,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1172",
+          "level": "warning",
+          "message": "Remove this parameter 'source', whose value is ignored in the method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2053,
+                  "startColumn": 48,
+                  "endLine": 2053,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "IsRemovable": "False"
+            }
+          }
+        },
+        {
+          "ruleId": "S1168",
+          "level": "warning",
+          "message": "Return an empty collection instead of null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2086,
+                  "startColumn": 17,
+                  "endLine": 2086,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1168",
+          "level": "warning",
+          "message": "Return an empty collection instead of null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2199,
+                  "startColumn": 17,
+                  "endLine": 2199,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2394,
+                  "startColumn": 27,
+                  "endLine": 2394,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2404,
+                  "startColumn": 13,
+                  "endLine": 2404,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2410,
+                  "startColumn": 21,
+                  "endLine": 2410,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2410,
+                  "startColumn": 45,
+                  "endLine": 2410,
+                  "endColumn": 47
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2421,
+                  "startColumn": 17,
+                  "endLine": 2421,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2426,
+                  "startColumn": 13,
+                  "endLine": 2426,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2431,
+                  "startColumn": 13,
+                  "endLine": 2431,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2434,
+                  "startColumn": 17,
+                  "endLine": 2434,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2439,
+                  "startColumn": 25,
+                  "endLine": 2439,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2439,
+                  "startColumn": 49,
+                  "endLine": 2439,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2446,
+                  "startColumn": 25,
+                  "endLine": 2446,
+                  "endColumn": 29
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2453,
+                  "startColumn": 21,
+                  "endLine": 2453,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2458,
+                  "startColumn": 17,
+                  "endLine": 2458,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2464,
+                  "startColumn": 13,
+                  "endLine": 2464,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2464,
+                  "startColumn": 30,
+                  "endLine": 2464,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2479,
+                  "startColumn": 17,
+                  "endLine": 2479,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2501,
+                  "startColumn": 17,
+                  "endLine": 2501,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2505,
+                  "startColumn": 17,
+                  "endLine": 2505,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2530,
+                  "startColumn": 21,
+                  "endLine": 2530,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2533,
+                  "startColumn": 25,
+                  "endLine": 2533,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2537,
+                  "startColumn": 25,
+                  "endLine": 2537,
+                  "endColumn": 29
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2544,
+                  "startColumn": 17,
+                  "endLine": 2544,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2549,
+                  "startColumn": 13,
+                  "endLine": 2549,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/GitHub/inguz-InguzDSP/InguzDSP/Program.cs",
+                "region": {
+                  "startLine": 2394,
+                  "startColumn": 27,
+                  "endLine": 2394,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+2 (incl 1 for nesting)",
+              "10": "+3 (incl 2 for nesting)",
+              "11": "+1",
+              "12": "+1",
+              "13": "+1",
+              "14": "+2 (incl 1 for nesting)",
+              "15": "+2 (incl 1 for nesting)",
+              "16": "+1",
+              "17": "+2 (incl 1 for nesting)",
+              "18": "+3 (incl 2 for nesting)",
+              "19": "+1",
+              "2": "+1",
+              "20": "+2 (incl 1 for nesting)",
+              "21": "+1",
+              "22": "+1 (recursion)",
+              "3": "+2 (incl 1 for nesting)",
+              "4": "+1",
+              "5": "+1",
+              "6": "+2 (incl 1 for nesting)",
+              "7": "+3 (incl 2 for nesting)",
+              "8": "+1",
+              "9": "+1"
+            }
+          }
+        }
+      ],
+      "rules": {
+        "CS0162": {
+          "id": "CS0162",
+          "shortDescription": "Unreachable code detected",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0162)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S108": {
+          "id": "S108",
+          "shortDescription": "Nested blocks of code should not be left empty",
+          "fullDescription": "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-108",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1125": {
+          "id": "S1125",
+          "shortDescription": "Boolean literals should not be redundant",
+          "fullDescription": "Redundant Boolean literals should be removed from expressions to improve readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1168": {
+          "id": "S1168",
+          "shortDescription": "Empty arrays and collections should be returned instead of null",
+          "fullDescription": "Returning null instead of an actual array, collection or map forces callers of the method to explicitly test for nullity, making them more complex and less readable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1168",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S1172": {
+          "id": "S1172",
+          "shortDescription": "Unused method parameters should be removed",
+          "fullDescription": "Unused parameters are misleading. Whatever the values passed to such parameters, the behavior will be the same.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1172",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1854": {
+          "id": "S1854",
+          "shortDescription": "Unused assignments should be removed",
+          "fullDescription": "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code. Even if it’s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1854",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1905": {
+          "id": "S1905",
+          "shortDescription": "Redundant casts should not be used",
+          "fullDescription": "Unnecessary casting expressions make the code harder to read and understand.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1905",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2486": {
+          "id": "S2486",
+          "shortDescription": "Generic exceptions should not be ignored",
+          "fullDescription": "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2486",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S3241": {
+          "id": "S3241",
+          "shortDescription": "Methods should not return values that are never used",
+          "fullDescription": "Private methods are clearly intended for use only within their own scope. When such methods return values that are never used by any of their callers, then clearly there is no need to actually make the return, and it should be removed in the interests of efficiency and clarity.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3241",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3265": {
+          "id": "S3265",
+          "shortDescription": "Non-flags enums should not be used in bitwise operations",
+          "fullDescription": "enums are usually used to identify distinct elements in a set of values. However enums can be treated as bit fields and bitwise operations can be used on them to combine the values. This is a good way of specifying multiple elements of set with a single value. When enums are used this way, it is a best practice to mark the enum with the FlagsAttribute.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3265",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3267": {
+          "id": "S3267",
+          "shortDescription": "Loops should be simplified with \"LINQ\" expressions",
+          "fullDescription": "When a loop is filtering, selecting or aggregating, those functions can be handled with a clearer, more concise LINQ expression instead.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3267",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S3457": {
+          "id": "S3457",
+          "shortDescription": "Composite format strings should be used correctly",
+          "fullDescription": "Because composite format strings are interpreted at runtime, rather than validated by the compiler, they can contain errors that lead to unexpected behaviors or runtime errors. This rule statically validates the good behavior of composite formats when calling the methods of String.Format, StringBuilder.AppendFormat, Console.Write, Console.WriteLine, TextWriter.Write, TextWriter.WriteLine, Debug.WriteLine(String, Object[]), Trace.TraceError(String, Object[]), Trace.TraceInformation(String, Object[]), Trace.TraceWarning(String, Object[]) and TraceSource.TraceInformation(String, Object[]).",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3457",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3776": {
+          "id": "S3776",
+          "shortDescription": "Cognitive Complexity of methods should not be too high",
+          "fullDescription": "Cognitive Complexity is a measure of how hard the control flow of a method is to understand. Methods with high Cognitive Complexity will be difficult to maintain.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3776",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S4487": {
+          "id": "S4487",
+          "shortDescription": "Unread \"private\" fields should be removed",
+          "fullDescription": "Private fields only used to store values without reading them later is a case of dead store. So changing the value of such field is useless and most probably indicates a serious error in the code.",
+          "defaultLevel": "note",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope",
+              "Unnecessary"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

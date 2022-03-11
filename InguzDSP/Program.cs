@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-//using System.Text;
-using System.IO;
-using System.Xml;
-using System.Threading;
-using System.Reflection;
-using System.Globalization;
-//using System.Security.Permissions;
+﻿//using System.Security.Permissions;
 
 using DSPUtil;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+//using System.Text;
+using System.IO;
+using System.Reflection;
+using System.Threading;
+using System.Xml;
 
 namespace InguzDSP
 {
-    class Program
+    static class Program
     {
         #region Member vars
 
@@ -37,8 +37,9 @@ namespace InguzDSP
         static int _sigparam1 = 0;      // Up to three parameters, meaning varies according to mode
         static int _sigparam2 = 0;
         static int _sigparam3 = 0;
-        static string _sigparamA = "";
-        static string _sigparamB = "";
+
+        static string _sigparamA ;
+        static string _sigparamB ;
 
         static string _impulsePath = null;
         static string _inPath = null;
@@ -75,7 +76,7 @@ namespace InguzDSP
         static double _eqFlatness;  // 0 to 100, 100 means NOP
         static string _matrixFilter = null;     // path of the 2-channel "matrix" filter (WAV)
         static string _bformatFilter = null;    // path of the ambisonic filter (AMB)
-        static double _width;
+
         static int _depth;
         static double _balance;
         static int _skew;
@@ -151,9 +152,18 @@ namespace InguzDSP
             stdout.WriteLine("Usage: InguzDSP -id clientID [-d outputbitdepth] [-r samplerate] [-wav] [-be]");
         }
 
+
+        static void DebugMessage(string DebugMessage)
+        {
+            if (_debug)
+            {
+                Trace.WriteLine(DebugMessage);
+            }
+        }
+
         #region Main: check args & run
         // FileSystemWatcher requires FullTrust
-       
+
         //[System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
         static void Main(string[] args)
         {
@@ -178,78 +188,71 @@ namespace InguzDSP
                 for (int j = 0; ok && j < args.Length; j++)
                 {
                     string arg = args[j];
-                    switch (args[j].ToUpperInvariant())
+                    //Amending this so that try catch is around the switch statement
+                    // should be much easier to read
+                    try
                     {
-                        case "-ID":
-                            try
-                            {
+                        switch (args[j].ToUpperInvariant())
+                        {
+                            case "-ID":
+
                                 _userID = args[++j];
-                            }
-                            catch (Exception) { /* ignore if there is no arg */ }
-                            break;
+                                break;
 
-                        case "-WAV":
-                            // the input has a WAV header, not raw
-                            _isRawIn = false;
-                            break;
+                            case "-WAV":
+                                // the input has a WAV header, not raw
+                                _isRawIn = false;
+                                break;
 
-                        case "-AMB":
-                            // The input is Ambisonics B-Format (4-channel); decode to UHJ (etc)
-                            // the input has a WAV header, not raw
-                            _isBFormat = true;
-                            _isRawIn = false;
-                            break;
+                            case "-AMB":
+                                // The input is Ambisonics B-Format (4-channel); decode to UHJ (etc)
+                                // the input has a WAV header, not raw
+                                _isBFormat = true;
+                                _isRawIn = false;
+                                break;
 
-                        case "-WAVO":
-                            // the output should have a WAV header, not raw
-                            _isRawOut = false;
-                            break;
+                            case "-WAVO":
+                                // the output should have a WAV header, not raw
+                                _isRawOut = false;
+                                break;
 
-                        case "-BE":
-                            // the input is big-endian
-                            _bigEndian = true;
-                            break;
+                            case "-BE":
+                                // the input is big-endian
+                                _bigEndian = true;
+                                break;
 
-                        case "-INPUT":
-                            try
-                            {
+                            case "-INPUT":
                                 _inPath = args[++j];
-                            }
-                            catch (Exception) { /* ignore if there is no arg */ }
-                            break;
+                                break;
 
-                        case "-OUTPUT":
-                            try
-                            {
+                            case "-OUTPUT":
+
                                 _outPath = args[++j];
-                            }
-                            catch (Exception) { /* ignore if there is no arg */ }
-                            break;
+                                break;
 
-                        case "-D":
-                            try
-                            {
+                            case "-D":
+
                                 n = ushort.Parse(args[++j], CultureInfo.InvariantCulture);
                                 if (n > 0) _outBits = n;
-                            }
-                            catch (Exception) { /* ignore if there is no arg */ }
-                            break;
+                                break;
 
-                        case "-R":
-                            try
-                            {
+                            case "-R":
+
                                 uint m = uint.Parse(args[++j], CultureInfo.InvariantCulture);
                                 if (m > 0) _inputSampleRate = m;
-                            }
-                            catch (Exception) { /* ignore if there is no arg */ }
-                            break;
+                                break;
 
-                        case "-SKIP":
-                            // SqueezeCenter always uses min:sec.fraction (even for >60 minutes)
-                            try
-                            {
+                            case "-SKIP":
+
+                                // SqueezeCenter always uses min:sec.fraction (even for >60 minutes)
                                 string ts = args[++j];
-                                string[] tsa = ts.Split(':', '.');
+                                //tidy up the old split statement - nb this might not work either
+                                //string[] tsa = ts.Split(':', '.');
+
+                                String[] myseparator = { ":", "." };
+                                Int32 count = 3;
+                                string[] tsa = ts.Split(myseparator, count, StringSplitOptions.RemoveEmptyEntries);
+                                //-- end of amendment
                                 if (tsa.Length == 3)
                                 {
                                     double tix = (double)(int.Parse(tsa[0]) * 60);
@@ -263,31 +266,31 @@ namespace InguzDSP
                                     // which is dumb and inflexible (and it's always the InvariantCulture version, tsk)
                                     _startTime = TimeSpan.Parse(args[++j]);
                                 }
-                            }
-                            catch (Exception) { /* ignore if there is no arg */ }
-                            break;
+                                break;
 
-                        case "-DEBUG":
-                            Trace.UseConsole = true;
-                            _debug = true;
-                            break;
+                            case "-DEBUG":
+                                Trace.UseConsole = true;
+                                _debug = true;
+                                break;
 
-                        case "-":
-                            // ignore
-                            break;
+                            case "-":
+                                // ignore
+                                break;
 
-                        case "<":
-                            // only for debugger; shell takes care of this normally
-                            string infile = args[++j];
-                            _inStream = File.OpenRead(infile);
-                            break;
+                            case "<":
+                                // only for debugger; shell takes care of this normally
+                                string infile = args[++j];
+                                _inStream = File.OpenRead(infile);
+                                break;
 
-                        default:
-                            Trace.WriteLine("Unrecognized parameter: {0}", arg);
-                            DisplayUsage(arg);
-                            ok = false;
-                            break;
+                            default:
+                                Trace.WriteLine("Unrecognized parameter: {0}", arg);
+                                DisplayUsage(arg);
+                                ok = false;
+                                break;
+                        }
                     }
+                    catch (Exception) { /* ignore if there is no arg */ }
                 }
                 if (ok && _userID == null)
                 {
@@ -358,10 +361,8 @@ namespace InguzDSP
                 Trace.WriteLine("Setup " + ts.TotalMilliseconds);
             }
 
-          
-
             // Read the configuration file
-            doRun = LoadConfig2();
+            LoadConfig2();
 
             // Do any cleanup required before we start
             CleanUp();
@@ -466,7 +467,8 @@ namespace InguzDSP
                     // Load the room correction impulse to the convolver
                     // (NB: don't do this until we've created the reader, otherwise we can't be user of the samplerate yet...)
                     LoadImpulse();
-                    GC.Collect();
+                    //Sonarqube recommends not manually calling a garbage collection
+                    //GC.Collect();
                 }
 
                 if (ok && _isBFormat)
@@ -504,7 +506,7 @@ namespace InguzDSP
                     // Shuffle back again
                     Shuffler shMSLR = new Shuffler();
                     shMSLR.Input = nextSrc;
-                    nextSrc = shMSLR;
+
 
                     // Do the room-correction convolution
                     _MainConvolver.Input = TwoChannel(shMSLR);
@@ -591,7 +593,7 @@ namespace InguzDSP
                 int n = _writer.Run();
 
                 TimeSpan elapsedTotal = System.DateTime.Now.Subtract(dtStartRun);
-                double realtime = n / _writer.SampleRate;
+                double realtime = n / (double)_writer.SampleRate;
                 double runtime = elapsedTotal.TotalMilliseconds / 1000;
                 Trace.WriteLine("{0} samples, {1} ms ({2} init), {3} * realtime, peak {4} dBfs", n, elapsedTotal.TotalMilliseconds, elapsedInit.TotalMilliseconds, Math.Round(realtime / runtime, 4), Math.Round(_writer.dbfsPeak, 4));
 
@@ -868,7 +870,8 @@ namespace InguzDSP
                     if (_configReaderThread != null)
                     {
                         _stopNow = true;
-                        _configReaderThread.Abort();
+                        _configReaderThread = null;
+                        //_configReaderThread.Abort();
                     }
                 }
             }
@@ -879,6 +882,7 @@ namespace InguzDSP
             // Configuration file has changed.
             // If we can, reload the file and use the new settings.
             // (If we can't read the new file, fail silently, that's OK)
+
             if (_debug)
             {
                 Trace.WriteLine("File {0}: {1}", e.ChangeType, CleanPath(_settingsFolder, e.FullPath));
@@ -908,20 +912,14 @@ namespace InguzDSP
                 {
                     // Wait (for de-bounce, and so we don't chew *all* the CPU when config changes need EQ recalc)
                     Thread.Sleep(250);
-                    if (_debug)
-                    {
-                        Trace.WriteLine("Configuration changed");
-                    }
+                    DebugMessage("Configuration changed");
                     _configReaderEvent.Reset();
                     TryReadConfig(false);
                     ok = true;
                 }
                 catch (Exception e)
                 {
-                    if (_debug)
-                    {
-                        Trace.WriteLine("ConfigReaderThread: " + e.Message);
-                    }
+                    DebugMessage("ConfigReaderThread: " + e.Message);
                 }
                 if (!_stopNow)
                 {
@@ -940,10 +938,8 @@ namespace InguzDSP
                     }
                     catch (Exception e)
                     {
-                        if (_debug)
-                        {
-                            Trace.WriteLine("ConfigReaderThread2: " + e.Message);
-                        }
+                        DebugMessage("ConfigReaderThread2: " + e.Message);
+
                     }
                 }
             }
@@ -958,7 +954,7 @@ namespace InguzDSP
             // - but we still allow override from app.config
             // Load them here (rather than in ReadConfig) because the appsettings is always cached anyway...
             // even if we watched it, it would never change...
-            
+
             System.Configuration.AppSettingsReader rdr;
             try
             {
@@ -1228,11 +1224,12 @@ namespace InguzDSP
 
         static bool TryReadConfig(bool firstTime)
         {
+
             lock (_lockReadConfig)
             {
                 XmlNode node;
                 _configDocument.Load(_configFile);
-
+                double _width;
                 int oldDepth = _depth;
                 string oldImpulsePath = _impulsePath;
                 int oldBands = _eqBands;
@@ -1407,7 +1404,8 @@ namespace InguzDSP
                     {
                         for (int n = 0; n < _eqValues.Count; n++)
                         {
-                            if (_eqValues[n].Gain != oldValues[n].Gain || _eqValues[n].Gain != oldValues[n].Gain)
+                            // if (_eqValues[n].Gain != oldValues[n].Gain || _eqValues[n].Gain != oldValues[n].Gain)
+                            if (_eqValues[n].Gain != oldValues[n].Gain)
                             {
                                 eqChanged = true;
                                 break;
@@ -2473,7 +2471,10 @@ namespace InguzDSP
                 // and it might be called "sox" or "sox.exe", depending on the operating system (of course).
                 //
 
-                if (true || isExtensibleFormat)
+                //if (true || isExtensibleFormat)
+                //Mo reason for this check to be here, but if solution stops working we can always remove condition
+
+                if (isExtensibleFormat)
                 {
                     // sox can't handle the WaveFormatExtensible file type, so we need to save a clean copy of the file first
                     // ALSO: sox goes very wrong if the original is near 0dBfs
