@@ -1,0 +1,207 @@
+       #region Signal Generator
+        static bool IsSigGen()
+        {
+            return (_siggen != null);
+        }
+        static bool IsSigGenEQ()
+        {
+            return (_siggen != null) && _siggenUseEQ != ChannelFlag.NONE;
+        }
+        static bool IsSigGenEQL()
+        {
+            return (_siggen != null) && ((_siggenUseEQ & ChannelFlag.LEFT) == ChannelFlag.LEFT);
+        }
+        static bool IsSigGenEQR()
+        {
+            return (_siggen != null) && ((_siggenUseEQ & ChannelFlag.RIGHT) == ChannelFlag.RIGHT);
+        }
+        static bool IsSigGenEQBoth()
+        {
+            return (_siggen != null) && ((_siggenUseEQ & ChannelFlag.BOTH) == ChannelFlag.BOTH);
+        }
+        static bool IsSigGenNonEQ()
+        {
+            return (_siggen != null) && _siggenUseEQ == ChannelFlag.NONE;
+        }
+        static bool IsSigGenNonEQL()
+        {
+            return (_siggen != null) && ((_siggenUseEQ & ChannelFlag.LEFT) != ChannelFlag.LEFT);
+        }
+        static bool IsSigGenNonEQR()
+        {
+            return (_siggen != null) && ((_siggenUseEQ & ChannelFlag.RIGHT) != ChannelFlag.RIGHT);
+        }
+
+        static ISoundObj GetSignalGenerator(double dBfs, out string desc)
+        {
+            double gain = MathUtil.gain(dBfs);
+            ISoundObj signalGenerator = null;
+            Sequencer seq;
+            string description = "Unknown";
+            switch (_siggen)
+            {
+                case "IDENT":
+                    // Left-right identification: embedded resource
+                    Assembly ass = Assembly.GetExecutingAssembly();
+                    foreach (string s in ass.GetManifestResourceNames())
+                    {
+                        if (s.Contains("LeftRight"))
+                        {
+                            Stream res = ass.GetManifestResourceStream(s);
+                            WaveReader rdr = new WaveReader(res);
+                            // The stream is stereo, but we want to alternate
+                            seq = new Sequencer();
+
+                            for (int j = 0; j < 10; j++)
+                            {
+                                seq.Add(rdr, new List<double>(new double[] { gain, 0 }));
+                                seq.Add(new NoiseGenerator(NoiseType.SILENCE, 2, 1.0, _inputSampleRate, 0.0, false));
+                                seq.Add(rdr, new List<double>(new double[] { 0, gain }));
+                                seq.Add(new NoiseGenerator(NoiseType.SILENCE, 2, 1.0, _inputSampleRate, 0.0, false));
+                            }
+
+                            signalGenerator = seq;
+                            break;
+                        }
+                    }
+                    /*
+                    // Left-right identification signal: morse code
+                    MorseCode envL = new MorseCode(" " + _sigparamA, 10, true);
+                    ISoundObj sigL = new SweepGenerator(1, envL.LengthSeconds * 5, 220, 7040, _inputSampleRate, 0, false, gain, true);
+                    envL.Input = sigL;
+
+                    MorseCode envR = new MorseCode(" " + _sigparamB, 10, true);
+                    ISoundObj sigR = new SweepGenerator(1, envR.LengthSeconds * 5, 7040, 220, _inputSampleRate, 0, false, gain, true);
+                    envR.Input = sigR;
+
+                    signalGenerator = new ChannelSplicer();
+                    (signalGenerator as ChannelSplicer).Add(envL);
+                    (signalGenerator as ChannelSplicer).Add(envR);
+                    */
+                    description = String.Format("Left/Right channel identification");
+                    break;
+
+                case "SWEEP":
+                    seq = new Sequencer();
+                    if (_sigparam1 == 0)
+                    {
+                        _sigparam1 = 45;
+                    }
+                    int lengthSamples = (int)(_sigparam1 * _inputSampleRate);
+                    if (lengthSamples < 8388608)
+                    {
+                        // High-accuracy logarithmic sweep starting at 10Hz
+                        int fade = (int)(_inputSampleRate / 20);
+                        FFTSweepGenerator sg = new FFTSweepGenerator(2, lengthSamples, 10, _inputSampleRate / 2, _inputSampleRate, gain, false);
+                        seq.Add(sg);
+                        description = String.Format("Logarithmic sine sweep 10Hz to {0}Hz in {1} seconds", _inputSampleRate / 2, _sigparam1);
+                    }
+                    else
+                    {
+                        // Simple logarithmic sweep starting at 10Hz, windowed (uses much less memory!)
+                        int fade = (int)(_inputSampleRate / 20);
+                        BlackmanHarris bhwf = new BlackmanHarris(lengthSamples / 2, fade, (int)((lengthSamples / 2) - fade));
+                        SweepGenerator sg = new SweepGenerator(2, lengthSamples, 10, _inputSampleRate / 2, _inputSampleRate, gain, false);
+                        bhwf.Input = sg;
+                        seq.Add(bhwf);
+                        description = String.Format("Log sine sweep 10Hz to {0}Hz in {1} seconds", _inputSampleRate / 2, _sigparam1);
+                    }
+                    // Follow by 3 seconds of silence
+                    seq.Add(new NoiseGenerator(NoiseType.SILENCE, 2, 3.0, _inputSampleRate, 0.0, false));
+                    signalGenerator = seq;
+                    break;
+
+                case "SINE":
+                    signalGenerator = new SineGenerator(2, _inputSampleRate, _sigparam1, gain);
+                    description = String.Format("{0}Hz sine", _sigparam1);
+                    break;
+
+                case "QUAD":
+                    signalGenerator = new SineQuadGenerator(2, _inputSampleRate, _sigparam1, gain);
+                    description = String.Format("{0}Hz quadrature", _sigparam1);
+                    break;
+
+                case "SQUARE":
+                    signalGenerator = new SquareGenerator(2, _inputSampleRate, _sigparam1, gain);
+                    description = String.Format("{0}Hz non-bandlimited square", _sigparam1);
+                    break;
+
+                case "BLSQUARE":
+                    signalGenerator = new BandLimitedSquareGenerator(2, _inputSampleRate, _sigparam1, gain);
+                    description = String.Format("{0}Hz bandlimited square", _sigparam1);
+                    break;
+
+                case "TRIANGLE":
+                    signalGenerator = new TriangleGenerator(2, _inputSampleRate, _sigparam1, gain);
+                    description = String.Format("{0}Hz non-bandlimited triangle", _sigparam1);
+                    break;
+
+                case "BLTRIANGLE":
+                    signalGenerator = new BandLimitedTriangleGenerator(2, _inputSampleRate, _sigparam1, gain);
+                    description = String.Format("{0}Hz bandlimited triangle", _sigparam1);
+                    break;
+
+                case "SAWTOOTH":
+                    signalGenerator = new SawtoothGenerator(2, _inputSampleRate, _sigparam1, gain);
+                    description = String.Format("{0}Hz non-bandlimited sawtooth", _sigparam1);
+                    break;
+
+                case "BLSAWTOOTH":
+                    signalGenerator = new BandLimitedSawtoothGenerator(2, _inputSampleRate, _sigparam1, gain);
+                    description = String.Format("{0}Hz bandlimited sawtooth", _sigparam1);
+                    break;
+
+                case "WHITE":
+                    signalGenerator = new NoiseGenerator(NoiseType.WHITE, 2, int.MaxValue, _inputSampleRate, gain, true);
+                    description = String.Format("White noise");
+                    break;
+
+                case "PINK":
+                    bool mono = (_sigparam1 != 0 ? true : false);
+                    signalGenerator = new NoiseGenerator(NoiseType.PINK, 2, int.MaxValue, _inputSampleRate, gain, mono);
+                    description = String.Format("Pink noise {0}", mono ? "(mono)" : "(stereo)");
+                    break;
+
+                case "INTERMODULATION":
+                    double n = 1;
+                    description = String.Format("Intermodulation test {0}Hz", _sigparam1);
+                    if (_sigparam2 != 0) { n++; description = description + " + " + _sigparam2 + "Hz"; }
+                    if (_sigparam3 != 0) { n++; description = description + " + " + _sigparam3 + "Hz"; }
+                    signalGenerator = new Mixer();
+                    (signalGenerator as Mixer).Add(new SineGenerator(2, _inputSampleRate, _sigparam1, gain), 1 / n);
+                    if (_sigparam2 != 0) (signalGenerator as Mixer).Add(new SineGenerator(2, _inputSampleRate, _sigparam2, gain), 1 / n);
+                    if (_sigparam3 != 0) (signalGenerator as Mixer).Add(new SineGenerator(2, _inputSampleRate, _sigparam3, gain), 1 / n);
+                    break;
+
+                case "SHAPEDBURST":
+                    description = String.Format("{0}Hz windowed (Blackman) over {1} cycles", _sigparam1, _sigparam2);
+                    throw new NotImplementedException();
+                //break;
+
+                default:
+                    _siggen = null;
+                    break;
+            }
+            if (IsSigGenEQ())
+            {
+                if (IsSigGenEQBoth())
+                {
+                    description = description + ", with EQ processing";
+                }
+                else if (IsSigGenEQL())
+                {
+                    description = description + ", with EQ processing in left channel";
+                }
+                else if (IsSigGenEQR())
+                {
+                    description = description + ", with EQ processing in right channel";
+                }
+                else
+                {
+                    description = description + ", with EQ processing";
+                }
+            }
+            desc = description;
+            return signalGenerator;
+        }
+        #endregion

@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Globalization;
 //using System.Text;
 using System.IO;
-using System.Reflection;
 using System.Threading;
 using System.Xml;
 
@@ -38,8 +37,8 @@ namespace InguzDSP
         static int _sigparam2 = 0;
         static int _sigparam3 = 0;
 
-        static string _sigparamA ;
-        static string _sigparamB ;
+        static string _sigparamA = "";
+        static string _sigparamB = "";
 
         static string _impulsePath = null;
         static string _inPath = null;
@@ -447,6 +446,7 @@ namespace InguzDSP
             }
 
             ISoundObj source = inputReader;
+
             if (IsSigGen())
             {
                 // Signal-generator source instead of music.
@@ -631,7 +631,7 @@ namespace InguzDSP
             }
         }
 
-
+        //Removing Signal Generator Code - just bloat unfortunately
         #region Signal Generator
         static bool IsSigGen()
         {
@@ -666,156 +666,14 @@ namespace InguzDSP
             return (_siggen != null) && ((_siggenUseEQ & ChannelFlag.RIGHT) != ChannelFlag.RIGHT);
         }
 
+
         static ISoundObj GetSignalGenerator(double dBfs, out string desc)
         {
             double gain = MathUtil.gain(dBfs);
             ISoundObj signalGenerator = null;
-            Sequencer seq;
+
             string description = "Unknown";
-            switch (_siggen)
-            {
-                case "IDENT":
-                    // Left-right identification: embedded resource
-                    Assembly ass = Assembly.GetExecutingAssembly();
-                    foreach (string s in ass.GetManifestResourceNames())
-                    {
-                        if (s.Contains("LeftRight"))
-                        {
-                            Stream res = ass.GetManifestResourceStream(s);
-                            WaveReader rdr = new WaveReader(res);
-                            // The stream is stereo, but we want to alternate
-                            seq = new Sequencer();
 
-                            for (int j = 0; j < 10; j++)
-                            {
-                                seq.Add(rdr, new List<double>(new double[] { gain, 0 }));
-                                seq.Add(new NoiseGenerator(NoiseType.SILENCE, 2, 1.0, _inputSampleRate, 0.0, false));
-                                seq.Add(rdr, new List<double>(new double[] { 0, gain }));
-                                seq.Add(new NoiseGenerator(NoiseType.SILENCE, 2, 1.0, _inputSampleRate, 0.0, false));
-                            }
-
-                            signalGenerator = seq;
-                            break;
-                        }
-                    }
-                    /*
-                    // Left-right identification signal: morse code
-                    MorseCode envL = new MorseCode(" " + _sigparamA, 10, true);
-                    ISoundObj sigL = new SweepGenerator(1, envL.LengthSeconds * 5, 220, 7040, _inputSampleRate, 0, false, gain, true);
-                    envL.Input = sigL;
-
-                    MorseCode envR = new MorseCode(" " + _sigparamB, 10, true);
-                    ISoundObj sigR = new SweepGenerator(1, envR.LengthSeconds * 5, 7040, 220, _inputSampleRate, 0, false, gain, true);
-                    envR.Input = sigR;
-
-                    signalGenerator = new ChannelSplicer();
-                    (signalGenerator as ChannelSplicer).Add(envL);
-                    (signalGenerator as ChannelSplicer).Add(envR);
-                    */
-                    description = String.Format("Left/Right channel identification");
-                    break;
-
-                case "SWEEP":
-                    seq = new Sequencer();
-                    if (_sigparam1 == 0)
-                    {
-                        _sigparam1 = 45;
-                    }
-                    int lengthSamples = (int)(_sigparam1 * _inputSampleRate);
-                    if (lengthSamples < 8388608)
-                    {
-                        // High-accuracy logarithmic sweep starting at 10Hz
-                        int fade = (int)(_inputSampleRate / 20);
-                        FFTSweepGenerator sg = new FFTSweepGenerator(2, lengthSamples, 10, _inputSampleRate / 2, _inputSampleRate, gain, false);
-                        seq.Add(sg);
-                        description = String.Format("Logarithmic sine sweep 10Hz to {0}Hz in {1} seconds", _inputSampleRate / 2, _sigparam1);
-                    }
-                    else
-                    {
-                        // Simple logarithmic sweep starting at 10Hz, windowed (uses much less memory!)
-                        int fade = (int)(_inputSampleRate / 20);
-                        BlackmanHarris bhwf = new BlackmanHarris(lengthSamples / 2, fade, (int)((lengthSamples / 2) - fade));
-                        SweepGenerator sg = new SweepGenerator(2, lengthSamples, 10, _inputSampleRate / 2, _inputSampleRate, gain, false);
-                        bhwf.Input = sg;
-                        seq.Add(bhwf);
-                        description = String.Format("Log sine sweep 10Hz to {0}Hz in {1} seconds", _inputSampleRate / 2, _sigparam1);
-                    }
-                    // Follow by 3 seconds of silence
-                    seq.Add(new NoiseGenerator(NoiseType.SILENCE, 2, 3.0, _inputSampleRate, 0.0, false));
-                    signalGenerator = seq;
-                    break;
-
-                case "SINE":
-                    signalGenerator = new SineGenerator(2, _inputSampleRate, _sigparam1, gain);
-                    description = String.Format("{0}Hz sine", _sigparam1);
-                    break;
-
-                case "QUAD":
-                    signalGenerator = new SineQuadGenerator(2, _inputSampleRate, _sigparam1, gain);
-                    description = String.Format("{0}Hz quadrature", _sigparam1);
-                    break;
-
-                case "SQUARE":
-                    signalGenerator = new SquareGenerator(2, _inputSampleRate, _sigparam1, gain);
-                    description = String.Format("{0}Hz non-bandlimited square", _sigparam1);
-                    break;
-
-                case "BLSQUARE":
-                    signalGenerator = new BandLimitedSquareGenerator(2, _inputSampleRate, _sigparam1, gain);
-                    description = String.Format("{0}Hz bandlimited square", _sigparam1);
-                    break;
-
-                case "TRIANGLE":
-                    signalGenerator = new TriangleGenerator(2, _inputSampleRate, _sigparam1, gain);
-                    description = String.Format("{0}Hz non-bandlimited triangle", _sigparam1);
-                    break;
-
-                case "BLTRIANGLE":
-                    signalGenerator = new BandLimitedTriangleGenerator(2, _inputSampleRate, _sigparam1, gain);
-                    description = String.Format("{0}Hz bandlimited triangle", _sigparam1);
-                    break;
-
-                case "SAWTOOTH":
-                    signalGenerator = new SawtoothGenerator(2, _inputSampleRate, _sigparam1, gain);
-                    description = String.Format("{0}Hz non-bandlimited sawtooth", _sigparam1);
-                    break;
-
-                case "BLSAWTOOTH":
-                    signalGenerator = new BandLimitedSawtoothGenerator(2, _inputSampleRate, _sigparam1, gain);
-                    description = String.Format("{0}Hz bandlimited sawtooth", _sigparam1);
-                    break;
-
-                case "WHITE":
-                    signalGenerator = new NoiseGenerator(NoiseType.WHITE, 2, int.MaxValue, _inputSampleRate, gain, true);
-                    description = String.Format("White noise");
-                    break;
-
-                case "PINK":
-                    bool mono = (_sigparam1 != 0 ? true : false);
-                    signalGenerator = new NoiseGenerator(NoiseType.PINK, 2, int.MaxValue, _inputSampleRate, gain, mono);
-                    description = String.Format("Pink noise {0}", mono ? "(mono)" : "(stereo)");
-                    break;
-
-                case "INTERMODULATION":
-                    double n = 1;
-                    description = String.Format("Intermodulation test {0}Hz", _sigparam1);
-                    if (_sigparam2 != 0) { n++; description = description + " + " + _sigparam2 + "Hz"; }
-                    if (_sigparam3 != 0) { n++; description = description + " + " + _sigparam3 + "Hz"; }
-                    signalGenerator = new Mixer();
-                    (signalGenerator as Mixer).Add(new SineGenerator(2, _inputSampleRate, _sigparam1, gain), 1 / n);
-                    if (_sigparam2 != 0) (signalGenerator as Mixer).Add(new SineGenerator(2, _inputSampleRate, _sigparam2, gain), 1 / n);
-                    if (_sigparam3 != 0) (signalGenerator as Mixer).Add(new SineGenerator(2, _inputSampleRate, _sigparam3, gain), 1 / n);
-                    break;
-
-                case "SHAPEDBURST":
-                    description = String.Format("{0}Hz windowed (Blackman) over {1} cycles", _sigparam1, _sigparam2);
-                    throw new NotImplementedException();
-                //break;
-
-                default:
-                    _siggen = null;
-                    break;
-            }
             if (IsSigGenEQ())
             {
                 if (IsSigGenEQBoth())
@@ -838,8 +696,10 @@ namespace InguzDSP
             desc = description;
             return signalGenerator;
         }
-        #endregion
 
+
+
+        #endregion
 
         #region Configuration
 
@@ -856,7 +716,7 @@ namespace InguzDSP
             _configWatcher = new FileSystemWatcher(f.DirectoryName, "*.settings.conf");
             _configWatcher.Changed += new FileSystemEventHandler(OnConfigurationChanged);
             _configWatcher.EnableRaisingEvents = true;
-            //          Trace.WriteLine("Listening for configuration changes.");
+
         }
 
         static void StopConfigListening()
@@ -871,7 +731,6 @@ namespace InguzDSP
                     {
                         _stopNow = true;
                         _configReaderThread = null;
-                        //_configReaderThread.Abort();
                     }
                 }
             }
@@ -966,65 +825,156 @@ namespace InguzDSP
                 return true;
             }
             //suggest adding _gain here as an int
-            try { _gain = (double)rdr.GetValue("gain", typeof(double)); }
-            catch (Exception) { }
-
-            try { _debug |= (bool)rdr.GetValue("debug", typeof(bool)); }
-            catch (Exception) { }
-            try { _inPath = (string)rdr.GetValue("input", typeof(string)); }
-            catch (Exception) { }
-            try { _isRawIn = (bool)rdr.GetValue("rawIn", typeof(bool)); }
-            catch (Exception) { }
-            try { _rawtype = (WaveFormat)rdr.GetValue("rawtype", typeof(int)); }
-            catch (Exception) { }
-            try { _rawbits = (ushort)rdr.GetValue("rawbits", typeof(ushort)); }
-            catch (Exception) { }
-            try { _rawchan = (ushort)rdr.GetValue("rawchan", typeof(ushort)); }
-            catch (Exception) { }
-
-            try { _outPath = (string)rdr.GetValue("output", typeof(string)); }
-            catch (Exception) { }
-            try { _outBits = (ushort)rdr.GetValue("outbits", typeof(ushort)); }
-            catch (Exception) { }
-
-            try { _dither = (DitherType)rdr.GetValue("dither", typeof(int)); }
-            catch (Exception) { }
-            try { _isRawOut = (bool)rdr.GetValue("rawOut", typeof(bool)); }
-            catch (Exception) { }
-            try { _partitions = (int)rdr.GetValue("partitions", typeof(int)); }
-            catch (Exception) { }
-
-            try { _maxImpulseLength = (int)rdr.GetValue("maximpulse", typeof(int)); }
-            catch (Exception) { }
-
-            try { _tail = (bool)rdr.GetValue("tail", typeof(bool)); }
-            catch (Exception) { }
-
-            try { _slow = (bool)rdr.GetValue("slow", typeof(bool)); }
-            catch (Exception) { }
-
-            // sox settings
-            try { _soxExe = (string)rdr.GetValue("soxExe", typeof(string)); }
-            catch (Exception) { }
-
-            try { _soxFmt = (string)rdr.GetValue("soxFmt", typeof(string)); }
-            catch (Exception) { }
-
-            // aften (or other output device) settings
-            try { _aftenExe = (string)rdr.GetValue("aftenExe", typeof(string)); }
-            catch (Exception) { }
-
-            try { _aftenFmt = (string)rdr.GetValue("aftenFmt", typeof(string)); }
-            catch (Exception) { }
-
-            // Ambisonic settings
-            try { _ambiDistance = (double)rdr.GetValue("ambiDistance", typeof(double)); }
-            catch (Exception) { }
-
-            try { _ambiShelfFreq = (double)rdr.GetValue("ambiShelfFreq", typeof(double)); }
-            catch (Exception) { }
-
+            //added exception handler to each stepp. useful bit of cleanup. 
+            string mySetting = "gain";
+            try
+            { _gain = (double)rdr.GetValue(mySetting, typeof(double)); }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "debug";
+                _debug |= (bool)rdr.GetValue(mySetting, typeof(bool));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "input";
+                _inPath = (string)rdr.GetValue(mySetting, typeof(string));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "rawIn";
+                _isRawIn = (bool)rdr.GetValue(mySetting, typeof(bool));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "rawtype";
+                _rawtype = (WaveFormat)rdr.GetValue(mySetting, typeof(int));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "rawbits";
+                _rawbits = (ushort)rdr.GetValue(mySetting, typeof(ushort));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "rawchan";
+                _rawchan = (ushort)rdr.GetValue(mySetting, typeof(ushort));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "output";
+                _outPath = (string)rdr.GetValue(mySetting, typeof(string));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "outbits";
+                _outBits = (ushort)rdr.GetValue(mySetting, typeof(ushort));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "dither";
+                _dither = (DitherType)rdr.GetValue(mySetting, typeof(int));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "rawOut";
+                _isRawOut = (bool)rdr.GetValue(mySetting, typeof(bool));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "partitions";
+                _partitions = (int)rdr.GetValue(mySetting, typeof(int));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "maximpulse";
+                _maxImpulseLength = (int)rdr.GetValue(mySetting, typeof(int));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "tail";
+                _tail = (bool)rdr.GetValue(mySetting, typeof(bool));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "slow";
+                _slow = (bool)rdr.GetValue(mySetting, typeof(bool));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                // sox settings
+                mySetting = "soxExe";
+                _soxExe = (string)rdr.GetValue(mySetting, typeof(string));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "soxFmt";
+                _soxFmt = (string)rdr.GetValue(mySetting, typeof(string));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "aftenExe";
+                _aftenExe = (string)rdr.GetValue(mySetting, typeof(string));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "aftenFmt";
+                _aftenFmt = (string)rdr.GetValue(mySetting, typeof(string));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                // Ambisonic settings
+                mySetting = "ambiDistance";
+                _ambiDistance = (double)rdr.GetValue(mySetting, typeof(double));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            try
+            {
+                mySetting = "ambiShelfFreq";
+                _ambiShelfFreq = (double)rdr.GetValue(mySetting, typeof(double));
+            }
+            catch (Exception)
+            { Trace.WriteLine("AppSettings error:" + mySetting); }
             return true;
+
         }
 
         private static bool LoadConfig2()
@@ -2050,7 +2000,8 @@ namespace InguzDSP
 
         static ISoundObj DecodeBFormatBinaural(ISoundObj source)
         {
-            throw new NotImplementedException();
+            // I am uncommenting this ecayse it might be worth experimenting with.
+            //throw new NotImplementedException();
 
             ISoundObj input = source;
             uint sr = input.SampleRate;
@@ -2081,8 +2032,9 @@ namespace InguzDSP
                     ISample sample = new Sample2(left, right);
                     return sample;
                 }
+               
                 return null;
-            });
+             });
 
             return bin;
         }
@@ -2092,53 +2044,8 @@ namespace InguzDSP
         {
             ISoundObj input = source;
             uint sr = input.SampleRate;
-            /*
-            if (_ambiUseShelf)
-            {
-                // Shelf-filters
-                // boost W at high frequencies, and boost X, Y at low frequencies
-                FilterProfile lfgXY = new FilterProfile();
-                lfgXY.Add(new FreqGain(_ambiShelfFreq / 2, 0));
-                lfgXY.Add(new FreqGain(_ambiShelfFreq * 2, -1.25));
-                FilterImpulse fiXY = new FilterImpulse(0, lfgXY, FilterInterpolation.COSINE, sr);
 
-                FilterProfile lfgW = new FilterProfile();
-                lfgW.Add(new FreqGain(_ambiShelfFreq / 2, 0));
-                lfgW.Add(new FreqGain(_ambiShelfFreq * 2, 1.76));
-                FilterImpulse fiW = new FilterImpulse(0, lfgW, FilterInterpolation.COSINE, sr);
-            }
-            if (_ambiUseDistance)
-            {
-                // Distance compensation filters
-                // apply phase shift to X, Y at (very) low frequencies
-                double fc = MathUtil.FcFromMetres(_ambiDistance);
-                IIR1 discomp = new IIR1LP(sr, fc, 8192);    // tbd: chain this
-            }
-            */
-
-            // Transformation filters
-            //
-            // Primary reference:
-            // Gerzon 1985 "Ambisonics in Multichannel Broadcasting and Video"
-            //
-            // Coefficients from: http://en.wikipedia.org/wiki/Ambisonic_UHJ_format:
-            // S = 0.9396926*W + 0.1855740*X
-            // D = j(-0.3420201*W + 0.5098604*X) + 0.6554516*Y
-            // Left = (S + D)/2.0
-            // Right = (S - D)/2.0
-            // which makes
-            // Left = (0.092787 + 0.2549302j)X + (0.4698463 - 0.17101005j)W + (0.3277258)Y
-            // Right= (0.092787 - 0.2549302j)X + (0.4698463 + 0.17101005j)W - (0.3277258)Y
-            //
-            // Coefficients from: http://www.york.ac.uk/inst/mustech/3d_audio/ambis2.htm
-            // Left = (0.0928 + 0.255j)X + (0.4699 - 0.171j)W + (0.3277)Y
-            // Right= (0.0928 - 0.255j)X + (0.4699 + 0.171j)W - (0.3277)Y
-
-            // The Mid-Side versions are simpler
-            // L+R = (0.0928 + 0.255j)X + (0.4699 - 0.171j)W + (0.3277)Y + ((0.0928 - 0.255j)X + (0.4699 + 0.171j)W - (0.3277)Y)
-            //     = (0.1856)X          + (0.9398)W
-            // L-R = (0.0928 + 0.255j)X + (0.4699 - 0.171j)W + (0.3277)Y - ((0.0928 - 0.255j)X + (0.4699 + 0.171j)W - (0.3277)Y)
-            //     =          (0.510j)X +          (0.342j)W + (0.6554)Y
+            // old commented out code Removed 
             // but since we're delaying signal via convolution anyway, not *too* much extra processing to do in LR mode...
 
             // Separate the WXY channels
