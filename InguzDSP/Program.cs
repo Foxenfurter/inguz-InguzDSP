@@ -150,11 +150,11 @@ namespace InguzDSP
             }
             stdout.WriteLine("Usage: InguzDSP -id clientID [-d outputbitdepth] [-r samplerate] [-wav] [-be]");
 			//lets beef this up with some environment info
-			  string[] cargs = Environment.GetCommandLineArgs();
-				//_pluginFolder = Directory.GetCurrentDirectory();
+			    //string[] cargs = Environment.GetCommandLineArgs();
+				_pluginFolder = Directory.GetCurrentDirectory();
                 //_pluginFolder = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                _pluginFolder = Path.GetDirectoryName(cargs[0]);
-			stdout.WriteLine("Current Folder is:" + _pluginFolder);
+                //_pluginFolder = Path.GetDirectoryName(cargs[0]);
+			  stdout.WriteLine("Current Folder is:" + _pluginFolder);
 			
         }
 
@@ -176,9 +176,11 @@ namespace InguzDSP
             try
             {
                 // Find where this executable is launched from
-                string[] cargs = Environment.GetCommandLineArgs();
-				//_pluginFolder = Directory.GetCurrentDirectory();
-                //_pluginFolder = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                var cargs = Environment.GetCommandLineArgs();
+                Trace.WriteLine("PLugin folder");
+
+                //_pluginFolder = Directory.GetCurrentDirectory();
+                //Trace.WriteLine("PLugin folder - SUCCESS " + _pluginFolder);
                 _pluginFolder = Path.GetDirectoryName(cargs[0]);
                 // Trace.WriteLine("Seems to be running {0} in {1}", cargs[0], _pluginFolder);
                 // _pluginFolder = Path.GetFullPath(Path.Combine(pathName, ".." + slash + ".." + slash + "Plugins" + slash + "InguzEQ" + slash));
@@ -944,14 +946,14 @@ namespace InguzDSP
                 _soxExe = (string)rdr.GetValue(mySetting, typeof(string));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { Trace.WriteLine("AppSettings error:" + mySetting + " " + _soxExe); }
             try
             {
                 mySetting = "soxFmt";
                 _soxFmt = (string)rdr.GetValue(mySetting, typeof(string));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { Trace.WriteLine("AppSettings error:" + mySetting + " " + _soxFmt)  ; }
             try
             {
                 mySetting = "aftenExe";
@@ -1396,6 +1398,7 @@ namespace InguzDSP
         {
             // _aftenExe = "aften";
             string exeName = _aftenExe;
+            
             if (File.Exists(Path.Combine(_pluginFolder, _aftenExe + ".exe")))
             {
                 exeName = "\"" + Path.Combine(_pluginFolder, _aftenExe + ".exe") + "\"";
@@ -2412,6 +2415,8 @@ namespace InguzDSP
 
                 // _soxExe = "sox";
                 string exeName = _soxExe;
+  
+
                 if (File.Exists(Path.Combine(_pluginFolder, _soxExe + ".exe")))
                 {
                     exeName = "\"" + Path.Combine(_pluginFolder, _soxExe + ".exe") + "\"";
