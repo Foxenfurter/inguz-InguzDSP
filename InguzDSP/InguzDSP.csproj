@@ -1,10 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <StartupObject>InguzDSP.Program</StartupObject>
     <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <SonarQubeTestProject>True</SonarQubeTestProject>
+	<InvariantGlobalization>true</InvariantGlobalization>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -21,7 +27,7 @@
   </Target>
 
   <ItemGroup>
-    <None Remove="Resources\InguzDSPUtilNew.dll" />
+     <None Remove="Resources\InguzDSPUtilNew.dll" />
   </ItemGroup>
 
   <ItemGroup>

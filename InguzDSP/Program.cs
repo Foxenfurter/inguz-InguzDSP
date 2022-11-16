@@ -3,6 +3,7 @@
 using DSPUtil;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 //using System.Text;
 using System.IO;
@@ -142,6 +143,8 @@ namespace InguzDSP
             }
         }
 
+
+
         static void DisplayUsage(string badArg)
         {
             if (badArg != null)
@@ -149,13 +152,33 @@ namespace InguzDSP
                 stdout.WriteLine("Parameter {0} was not recognized.", badArg);
             }
             stdout.WriteLine("Usage: InguzDSP -id clientID [-d outputbitdepth] [-r samplerate] [-wav] [-be]");
-			//lets beef this up with some environment info
-			    //string[] cargs = Environment.GetCommandLineArgs();
-				_pluginFolder = Directory.GetCurrentDirectory();
-                //_pluginFolder = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                //_pluginFolder = Path.GetDirectoryName(cargs[0]);
-			  stdout.WriteLine("Current Folder is:" + _pluginFolder);
-			
+            //lets beef this up with some environment info
+            string[] cargs = Environment.GetCommandLineArgs();
+            //_pluginFolder = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            //_pluginFolder = Directory.GetCurrentDirectory();
+            //_pluginFolder = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            _pluginFolder = Path.GetDirectoryName(cargs[0]);
+            int first = 0;
+            string appData = "";
+            // Inguz is expected to be pushed into a file-path on the cache. but if it isn't we don't want it to fail!
+
+            first = _pluginFolder.IndexOf("Cache");
+            if (first < 0)
+            {
+                first = _pluginFolder.IndexOf("cache");
+            }
+            if (first >= 0)
+            {
+                appData = Path.GetFullPath(_pluginFolder.Substring(0, first) + slash + "prefs" + slash);
+            }
+            else
+            {
+                appData = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+            }
+
+            _dataFolder = Path.GetFullPath(Path.Combine(appData, "InguzEQ" + slash));
+            stdout.WriteLine("AppDataFolder is: " + appData + " & Current Folder is: " + _pluginFolder);
+            stdout.WriteLine("Settings are located here: " + _dataFolder);
         }
 
 
@@ -176,22 +199,46 @@ namespace InguzDSP
             try
             {
                 // Find where this executable is launched from
-                var cargs = Environment.GetCommandLineArgs();
+                string[] cargs = Environment.GetCommandLineArgs();
                 Trace.WriteLine("PLugin folder");
 
                 //_pluginFolder = Directory.GetCurrentDirectory();
                 //Trace.WriteLine("PLugin folder - SUCCESS " + _pluginFolder);
-                _pluginFolder = Path.GetDirectoryName(cargs[0]);
-                // Trace.WriteLine("Seems to be running {0} in {1}", cargs[0], _pluginFolder);
+                               
                 // _pluginFolder = Path.GetFullPath(Path.Combine(pathName, ".." + slash + ".." + slash + "Plugins" + slash + "InguzEQ" + slash));
+                _pluginFolder = Path.GetDirectoryName(cargs[0]);
+                int first = 0;
+                string appData = "";
+                // Inguz is expected to be pushed into a file-path on the cache. but if it isn't we don't want it to fail!
 
-                string appData = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+                first = _pluginFolder.IndexOf("Cache");
+                if (first < 0)
+                {
+                    first = _pluginFolder.IndexOf("cache");
+                }
+
+                if ( first >= 0 )
+                {
+                    appData = Path.GetFullPath(_pluginFolder.Substring(0, first) + slash + "prefs" + slash);
+                }
+                else
+                {
+                     appData = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+                }
+                //_pluginFolder = _pluginFolder.Substring(0, first) + slash +"prefs"+ slash  ;
+
+                //string appData = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+                
                 _dataFolder = Path.GetFullPath(Path.Combine(appData, "InguzEQ" + slash));
                 _settingsFolder = Path.GetFullPath(Path.Combine(appData, "InguzEQ" + slash + "Settings" + slash));
                 _tempFolder = Path.GetFullPath(Path.Combine(appData, "InguzEQ" + slash + "Temp" + slash));
                 Trace.FilePath = Path.Combine(_dataFolder, "log.txt");
 
+                //Trace.WriteLine("Seems to be running {0} in {1}", cargs[0], _settingsFolder);
+                Trace.WriteLine("InguzDSP ({0}) {1}", _settingsFolder , String.Join(" ", args));
+                
                 Trace.WriteLine("InguzDSP ({0}) {1}", DSPUtil.DSPUtil.GetVersionInfo(), String.Join(" ", args));
+
                 bool ok = LoadConfig1();
                 ushort n;
                 for (int j = 0; ok && j < args.Length; j++)
@@ -641,7 +688,7 @@ namespace InguzDSP
             }
         }
 
-        //Removing Signal Generator Code - just bloat unfortunately
+        //Signal Generator Code - I thought it was just bloat, but is used in eq/convolver
         #region Signal Generator
         static bool IsSigGen()
         {
@@ -824,6 +871,8 @@ namespace InguzDSP
             // Load them here (rather than in ReadConfig) because the appsettings is always cached anyway...
             // even if we watched it, it would never change...
 
+            String myMissingConfig = "Settings not found in InguzDSP.dll.config: ";
+            //_pluginFolder
             System.Configuration.AppSettingsReader rdr;
             try
             {
@@ -840,105 +889,106 @@ namespace InguzDSP
             try
             { _gain = (double)rdr.GetValue(mySetting, typeof(double)); }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
+
             try
             {
                 mySetting = "debug";
                 _debug |= (bool)rdr.GetValue(mySetting, typeof(bool));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "input";
                 _inPath = (string)rdr.GetValue(mySetting, typeof(string));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "rawIn";
                 _isRawIn = (bool)rdr.GetValue(mySetting, typeof(bool));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "rawtype";
                 _rawtype = (WaveFormat)rdr.GetValue(mySetting, typeof(int));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "rawbits";
                 _rawbits = (ushort)rdr.GetValue(mySetting, typeof(ushort));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "rawchan";
                 _rawchan = (ushort)rdr.GetValue(mySetting, typeof(ushort));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "output";
                 _outPath = (string)rdr.GetValue(mySetting, typeof(string));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "outbits";
                 _outBits = (ushort)rdr.GetValue(mySetting, typeof(ushort));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "dither";
                 _dither = (DitherType)rdr.GetValue(mySetting, typeof(int));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "rawOut";
                 _isRawOut = (bool)rdr.GetValue(mySetting, typeof(bool));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "partitions";
                 _partitions = (int)rdr.GetValue(mySetting, typeof(int));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "maximpulse";
                 _maxImpulseLength = (int)rdr.GetValue(mySetting, typeof(int));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "tail";
                 _tail = (bool)rdr.GetValue(mySetting, typeof(bool));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "slow";
                 _slow = (bool)rdr.GetValue(mySetting, typeof(bool));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 // sox settings
@@ -946,28 +996,29 @@ namespace InguzDSP
                 _soxExe = (string)rdr.GetValue(mySetting, typeof(string));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting + " " + _soxExe); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
+
             try
             {
                 mySetting = "soxFmt";
                 _soxFmt = (string)rdr.GetValue(mySetting, typeof(string));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting + " " + _soxFmt)  ; }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "aftenExe";
                 _aftenExe = (string)rdr.GetValue(mySetting, typeof(string));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "aftenFmt";
                 _aftenFmt = (string)rdr.GetValue(mySetting, typeof(string));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 // Ambisonic settings
@@ -975,14 +1026,16 @@ namespace InguzDSP
                 _ambiDistance = (double)rdr.GetValue(mySetting, typeof(double));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
             try
             {
                 mySetting = "ambiShelfFreq";
                 _ambiShelfFreq = (double)rdr.GetValue(mySetting, typeof(double));
             }
             catch (Exception)
-            { Trace.WriteLine("AppSettings error:" + mySetting); }
+            { myMissingConfig = string.Concat(myMissingConfig, " ", mySetting); }
+
+            Trace.WriteLine( myMissingConfig);
             return true;
 
         }
